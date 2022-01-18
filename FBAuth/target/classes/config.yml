@@ -1,0 +1,65 @@
+database:
+  name: "server"
+  user: "root"
+  password: ""
+  host: "localhost:3306"
+
+# Сотрите мой ник и напишите ники админов
+admins:
+  - swat1x
+
+2fa-bots:
+  messages:
+    game:
+      readyToConnect: "&aПочти готово!&f Чтобы привязать аккаунт, напишите &b/link %code &fнашему &bTelegram&f или &9VK&f боту"
+      successConnect: "&aАккаунт успешно привязан к боту %botName"
+      loginConfirm: "&aВход подтверждёт из соц. сети"
+      kick: "&cАккаунт был кикнут через привязанные соц. сети"
+      alreadyRequestCode: "&cВы уже запросили код на привязку, если вдруг забыли, то вот он: &f%code"
+      alreadyLinked: "&cВы уже привязали свой аккаунт"
+  tg:
+    colorName: "&bTelegram"
+    enable: false
+    username: "username бота (@FBAuth_bot, только без @)"
+    token: "токен"
+  vk:
+    colorName: "&9VK"
+    enable: false
+    groupId: 123456
+    token: "токен"
+
+
+messages:
+  noAdmin: "&fПлагин &bFBAuth&f. Автор &eswat1x&7 vk.com/swat1x"
+  register: "Для регистрации используйте &e/reg <пароль>"
+  login: "Для авторизации используйте &e/l <пароль>"
+  2fa: "Подтвердите вход в личных сообщениях %linkType"
+  changePassword: "Для смены пароля используйте &e/cp <старый пароль> <новый пароль>"
+  insertPassword: "&cВведите пароль"
+  hasSession: "&aСессия активна. Приятной игры!"
+  successRegister: "&aВы успешно зарегистрировались. Приятной игры!"
+  successLogin: "&aВы успешно авторизировались. Приятной игры!"
+  alreadyRegister: "&cВы уже зарегистрированы"
+  alreadyLogin: "&cВы уже авторизированы"
+  wrongPassword: "&cНеправильный пароль"
+  noTimeToAuth: "&cВы не успели авторизоваться"
+  actionBarTime: "Осталось времени на авторизацию &e%time"
+  actionBarAuth: "&aВы успешно авторизировались"
+  wrongNameSize: "&cНик должен быть не короче 3 и не длинне 16 символов"
+  wrongNameCase: "&cНеверный регистр ника. Зайдите под ником &f%name"
+  newPassword: "&aВаш новый пароль &7(Наведите чтобы посмотреть)"
+  newPassword-hover:
+    - "Ваш новый пароль &7- &e%password"
+    - " "
+    - "&7Нажмите F2 чтобы не забыть пароль"
+
+settings:
+  # Указывается время в секундах
+  sessionSize: 300
+  authTime: 30
+  nickSize:
+    min: 3
+    max: 16
+  servers:
+    auth: auth
+    lobby: lobby

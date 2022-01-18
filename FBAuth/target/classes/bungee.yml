@@ -1,0 +1,4 @@
+name: FBAuth
+version: '1.0'
+main: me.swat1x.fbauth.AuthPlugin
+author: swat1x
